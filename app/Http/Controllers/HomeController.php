@@ -3,18 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\IKU;
 use Illuminate\Http\Request;
+
 
 class HomeController extends Controller
 {
-    public function dashboard(){
-        return view('dashboard');
-    }
-
-    public function index (){
+   
+    public function index ()
+    {
+        $data_iku = IKU::latest()->paginate(6);
         
-        $data = User::get();
-
-        return view('index', compact('data'));
+        return view('program.iku.dashboard', compact('data_iku'));
     }
+
+    
 }
+

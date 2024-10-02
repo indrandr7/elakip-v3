@@ -44,8 +44,8 @@
         <div class="navbar-menu-wrapper d-flex align-items-top">
           <ul class="navbar-nav">
             <li class="nav-item fw-semibold d-none d-lg-block ms-0">
-              <h1 class="welcome-text">Selamat Datang, <span class="text-black fw-bold">UDPK</span></h1>
-              <h3 class="welcome-sub-text">Capaian Pokja Perencanaan dan Keuangan Bulan ini </h3>
+              <h1 class="welcome-text">Selamat Datang, <span class="text-black fw-bold">User</span></h1>
+              <h3 class="welcome-sub-text">Capaian Pokja Perencanaan dan Keuangan </h3>
             </li>
           </ul>
           <ul class="navbar-nav ms-auto">
@@ -110,21 +110,6 @@
                 <input type="search" class="form-control" placeholder="Search Here" title="Search here">
               </form>
             </li>
-            
-            
-            <li class="nav-item dropdown d-none d-lg-block user-dropdown">
-              <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                <img class="img-xs rounded-circle" src="{{ asset('staradmin/dist/assets/images/logo_den.png') }} " alt="Profile image"> </a>
-              <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-                <div class="dropdown-header text-center">
-                  <img class="img-md rounded-circle" src="{{ asset('staradmin/dist/assets/images/faces/face8.jpg') }} " alt="Profile image">
-                  <p class="mb-1 mt-3 fw-semibold">UDPK</p>
-                  <p class="fw-light text-muted mb-0">Pokja Perencanaan dan Keuangan</p>
-                </div>
-                <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i>Profil</a>
-                <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Logout</a>
-              </div>
-            </li>
           </ul>
           <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
             <span class="mdi mdi-menu"></span>
@@ -137,28 +122,25 @@
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
           <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">
-                <i class="mdi mdi-grid-large menu-icon"></i>
+              <a class="nav-link" href="/">
+                <i class="mdi mdi-home menu-icon"></i>
                 <span class="menu-title">Dashboard</span>
               </a>
             </li>
             <li class="nav-item nav-category">Menu Utama</li>
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                <i class="menu-icon mdi mdi-floor-plan"></i>
-                <span class="menu-title">Laporan</span>
-              </a>
-            </li>
+            
             <li class="nav-item">
               <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
-                <i class="menu-icon mdi mdi-card-text-outline"></i>
+                <i class="menu-icon fa fa-list-alt"></i>
                 <span class="menu-title">Program Kegiatan</span>
                 <i class="menu-arrow"></i>
               </a>
               <div class="collapse" id="form-elements">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">IKU</a></li>
-                  <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Kegiatan</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/iku">IKU</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/kegiatan">Kegiatan</a>
+                   
+                  </li>
                 </ul>
               </div>
             </li>
@@ -170,9 +152,9 @@
               </a>
               <div class="collapse" id="auth">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Biro </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> Pokja </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> Sub Pokja </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="/biro"> Biro </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="/pokja"> Pokja </a></li>
+                  <!-- <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> Sub Pokja </a></li> -->
                   <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Durasi Monitoring </a></li>
                   <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Pengguna </a></li>
                   <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Password </a></li>
@@ -180,11 +162,10 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-                <i class="menu-icon fa fa-eercast"></i>
+              <a class="nav-link" href="">
+                <i class="menu-icon mdi mdi-logout"></i>
                 <span class="menu-title">Logout</span>
               </a>
-              
             </li>
           </ul>
         </nav>

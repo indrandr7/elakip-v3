@@ -1,7 +1,12 @@
 <?php
 
-use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\IKUController;
+use App\Http\Controllers\BiroController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PokjaController;
+use App\Http\Controllers\KegiatanController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +19,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[HomeController::class, 'dashboard']);
+Route::get('/',[HomeController::class, 'index']);
+
+Route::get('/iku', [IKUController::class, 'index']);
+
+Route::get('/kegiatan', [KegiatanController::class, 'index']);
+
+Route::get('/biro', [BiroController::class, 'index']);
+
+Route::get('/pokja', [PokjaController::class, 'index']);
